@@ -173,8 +173,9 @@ In this exercise, we will group all the actions that can happen on our posts ins
 
 Steps:
 - Create a controller for the posts: `PostController`
-- Implement a static method `list($post)` to handle listing our posts
-- Implement a static method `show()` to handle showing a single post
+- Implement a method `list($post)` to handle listing our posts
+- Implement a method `show()` to handle showing a single post
+- Modify the existing routes to use the `PostController`
 
 You can use `artisan` to create the controller: `php artisan make:controller PostController`
 
