@@ -126,7 +126,7 @@ When the blog post doesn't exist, you can return a 404 error to the browser.
 You can implement this using `Routes` and `Views` only.
 
 
-### Exercise 3: Use a model to provide the blog posts
+### Exercise 4: Use a model to provide the blog posts
 
 In this exercise, we will improve the existing blog mechanism by creating a **model** `Post` that will find the post files for us.
 
@@ -140,12 +140,12 @@ You can use `artisan` to create the model: `php artisan make:model Post`
 You can implement this using `Routes`, `Models` and `Views` only.
 
 
-### Exercise 4: Use the created model to list all posts
+### Exercise 5: Use the created model to list all posts
 
 In this exercise, we will improve the existing blog mechanism by using the **model** `Post` to list all our posts on the `http://localhost/posts` page.
 
 Steps:
-- You can create a static method `Post::all()` that will list the posts from the disk
+- You can create a static method `Post::list()` that will list the posts from the disk
 - Modify the existing route `http://localhost/posts` to use this `Post` model
 
 To be able to list the files on disk, you can use the `File` facade from Laravel: `use Illuminate\Support\Facades\File;`
@@ -153,7 +153,7 @@ To be able to list the files on disk, you can use the `File` facade from Laravel
 You can implement this using `Routes`, `Models` and `Views` only.
 
 
-### Exercise 5: Use YAML front matter to improve the list of all posts
+### Exercise 6: Use YAML front matter to improve the list of all posts
 
 In this exercise, we will improve the list of posts by using a metadata in our blog posts files (`my-first-post.html`).
 
@@ -167,7 +167,7 @@ Steps:
 You can implement this using `Routes`, `Models` and `Views` only.
 
 
-### Exercise 6: Use a controller to manage posts
+### Exercise 7: Use a controller to manage posts
 
 In this exercise, we will group all the actions that can happen on our posts inside a Controller.
 
