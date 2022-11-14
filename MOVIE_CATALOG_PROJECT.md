@@ -62,7 +62,7 @@ Create a page to display a movie and all it's information.
 **Steps:**
 - Create the controller `MovieController`
 - Create a method `show($id)` in the controller to handle the action
-- Add the route `/movie/{id}`
+- Add the route `/movies/{id}`
 - Design a simple page to display the movie information
 
 
@@ -72,8 +72,7 @@ Create a page to display a movie and all it's information.
 Create a page that lists the first 20 movies found in database.
 
 **Steps:**
-- Create the controller `MovieController`
-- Create a method `list()` in the controller to handle the action
+- Create a method `list()` in the `MovieController` to handle the action
 - Add the route `/movies`
 - Design a simple page to display the movie list
 
@@ -101,8 +100,8 @@ To explore more than the first 20 movies, we need a way to handle pages.
 **Objective**
 Add an ordering feature using query parameters
 
-We should be able to order the list of movies by `startDate` and `averageRating`:
-- `/movies?order_by=releaseDate&order=asc`
+We should be able to order the list of movies by `startYear` and `averageRating`:
+- `/movies?order_by=startYear&order=asc`
 - `/movies?order_by=averageRating&order=desc`
 
 **Commit all your changes to Git**
