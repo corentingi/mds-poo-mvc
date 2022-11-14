@@ -47,8 +47,9 @@ Let's first setup the base of the project
 1) Fork the project on GitHub: https://github.com/corentingi/mds-poo-exercice-catalog
 2) Clone the project locally: `git clone git@github.com:xxxx/mds-poo-exercice-catalog.git`
 3) Configure the project: Create a `.env` file containing the correct information to connect to the database
-4) Start a development server with artisan `php artisan serve`
-5) Check all works loading the main page: http://localhost:8000 (You should see a page with a list of movies)
+4) Install dependencies: `composer install`
+5) Start a development server with artisan `php artisan serve`
+6) Check all works loading the main page: http://localhost:8000 (You should see a page with a list of movies)
 
 **Note:** For this part we will be using the database `catalog`
 
