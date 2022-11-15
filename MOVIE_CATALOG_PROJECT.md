@@ -181,9 +181,6 @@ Now that we have the controller and relationship ready, create the page to list 
 
 You can re-use the work done for listing movies with filters and pagination.
 
-**BONUS:**
-- Also add the `/series/random` page to find a random series
-
 **Commit all your changes to Git**
 
 
@@ -199,6 +196,9 @@ When we click on a series in the list, we want to display its details.
 - Add a new route `/series/{id}` (to display a single series information)
 - Add a new view to display a series information
 - Add links between the pages: `/series` and `/series/{id}`
+
+**BONUS:**
+- Also add the `/series/random` page to find a random series
 
 **Commit all your changes to Git**
 
