@@ -251,18 +251,8 @@ Change the code of the application to handle the new table `Title`
 - Add a new model `Title`
 - The models `Movie`, `Series` and `Episode` could now inherit from this `Title` class
 - The controllers `MovieController`, `SeriesController` and `EpisodeController` could inherit from a `TitleController`
-- We can now factorize most functions
-
+- We can now factorize most functions:
+  - Some Controller functions can be factorized
+  - The search function can be improved now that all results derive from the same Model
 
 **Commit all your changes to Git**
-
-
-#### Exercise 2: Add a form to insert new movies/series/episodes
-
-**Objective**
-Create a page that allows adding a new title (movie, TV series or episode).
-
-#### Exercise 3: Add a form to update movies/series/episodes
-
-**Objective**
-Create a page that allows editing an existing title.
