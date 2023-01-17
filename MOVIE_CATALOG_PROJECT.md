@@ -49,7 +49,7 @@ Let's first setup the base of the project
 3) Configure the project: Create a `.env` file containing the correct information to connect to the database
 4) Install dependencies: `composer install`
 5) Start a development server with artisan `php artisan serve`
-6) Check all works loading the main page: http://localhost:8000 (You should see a page with a list of movies)
+6) Check that everything works by loading the main page: http://localhost:8000 (You should see a page with a list of movies)
 
 **Note:** For this part we will be using the database `catalog`
 
@@ -65,6 +65,7 @@ Create a page to display a movie and all it's information.
 - Add the route `/movies/{id}`
 - Design a simple page to display the movie information
 
+**Commit all your changes to Git**
 
 #### Exercise 2: Page to list all movies
 
