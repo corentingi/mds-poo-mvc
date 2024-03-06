@@ -50,6 +50,27 @@ Optional:
 - Laravel Blade Snippets
 
 
+## MySQL version
+
+If using MySQL version 5.7 or earlier, you will need to update your `/app/Providers/AppServiceProvider.php` to contain:
+
+```php
+use Illuminate\Support\Facades\Schema;
+
+/**
+ * Bootstrap any application services.
+ *
+ * @return void
+ */
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+```
+
+Source: [StackOverflow](https://stackoverflow.com/questions/42244541/laravel-migration-error-syntax-error-or-access-violation-1071-specified-key-wa)
+
+
 ## Exercises
 
 After each exercise, remember to commit your work before moving to the next.
@@ -103,7 +124,7 @@ The migration was created in `./database/migrations`.
 Create a new database `phone_book` and configure the connection to it in your Laravel application.
 
 To configure the database, create a file `.env` and add the following lines:
-```
+```ini
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
