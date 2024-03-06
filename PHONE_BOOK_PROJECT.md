@@ -149,11 +149,26 @@ The following commands are usefull:
 - `php artisan migrate:fresh`
 
 
-### Exercice 5: Display contacts
+### Exercice 5: List contacts
 
 We now want to display the list of contacts.
 - Create a controller `ContactController` using `artisan`
 - Link the Controller to the model `Contact`
-- Create a new view `contact.blade.php` using `artisan`
+- Create a new view `contact.list` using `artisan`
 
 You can add manually some contacts in database to display them.
+
+
+### Exercice 6: Create contacts
+
+Now that we have the list of contacts. We want to be able to add contacts from the application.
+
+- Create a form that will ask for contact information.
+- Implement the right method in `ContactController` to create a new Contact.
+- After the contact is inserted, redirect to the list of contacts.
+
+
+### Exercices 7: Delete contacts
+
+Add a button to delete contacts from the list.
+After a delete, redirect the user to the contact list.
