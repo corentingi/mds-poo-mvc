@@ -99,27 +99,7 @@ Steps:
 You can implement this using only `Routes` and `Views`.
 
 
-### Exercise 2: Contact model
-
-Create a new model that will be our `Contact` model.
-
-The `Contact` model should have some properties:
-- first_name
-- last_name
-- date_of_birth
-- phone_number
-- email
-
-You can create the contact with the following command:
-- `php artisan make:model`
-- Specify the name of the model: `Contact`
-- Tick the line "Migration" (move with arrows and toggle with space bar)
-- press enter
-
-The migration was created in `./database/migrations`.
-
-
-### Exercise 3: Configure database
+### Exercise 2: Configure database
 
 Create a new database `phone_book` and configure the connection to it in your Laravel application.
 
@@ -136,22 +116,45 @@ DB_PASSWORD=root
 You can use PhpMyAdmin to create the database `phone_book`.
 
 
-### Exercise 4: Fill in the migration
+### Exercise 3: Create the contacts table
 
-You can use `artisan` and the `migrations` to update the database automatically.
+We want to create a new table `contacts` that we will use to store contact information.
 
-If you created your model with a migration, you can modify the migration and run it to update the database.
+You could create this table manually, but Laravel allows you to automate this action with [database migrations](https://laravel.com/docs/10.x/migrations).
 
-You should read the documentation here: https://laravel.com/docs/10.x/migrations
-
-The following commands are usefull:
+You can use `artisan` to create and manipulate database migrations :
+- `php artisan make:migration create_contacts_table`
 - `php artisan migrate`
 - `php artisan migrate:fresh`
+
+Steps:
+- Create the table using migrations with the following columns:
+  - first_name
+  - last_name
+  - date_of_birth
+  - phone_number
+  - email
+
+
+### Exercise 4: Contact model
+
+We will create a new model called `Contact` associated with the table `contacts` in our database.
+
+Laravel automatically links the `Contact` model with the table named `contacts`.
+
+You can create the contact with the following command:
+- `php artisan make:model Contact`
+
+There is no need to define properties in our model, because Laravel will automatically make the columns available to us.
 
 
 ### Exercice 5: List contacts
 
-We now want to display the list of contacts.
+We now want to display the contacts available in our database.
+
+Note: You can add some contacts manually in our table with PhPMyAdmin.
+
+Steps:
 - Create a controller `ContactController` using `artisan`
 - Link the Controller to the model `Contact`
 - Create a new view `contact.list` using `artisan`
@@ -164,11 +167,35 @@ You can add manually some contacts in database to display them.
 Now that we have the list of contacts. We want to be able to add contacts from the application.
 
 - Create a form that will ask for contact information.
-- Implement the right method in `ContactController` to create a new Contact.
-- After the contact is inserted, redirect to the list of contacts.
+- Implement the right method in `ContactController` to save a new contact in database.
+- Add a route that will serve the newly implemented method from the controller.
+- After the contact is inserted in database, redirect to the list of contacts.
 
 
 ### Exercices 7: Delete contacts
 
 Add a button to delete contacts from the list.
 After a delete, redirect the user to the contact list.
+
+
+### Exercice 8: Contact details
+
+Create a page that displays more information about the contact.
+
+Example:
+- When I go to the page `/contacts/154` I should see the contact page of the contact number 154 in my database.
+
+You can add some more columns in the database. For example:
+- address
+- photo
+- etc...
+
+### Exercice 9: Contact groups
+
+Create a new table `Groups`.
+
+This table will store groups names, for example `MyDigitalSchool students`.
+
+Create a relationship between `Contacts` and `Groups`.
+
+Use the Laravel docs: [Eloquent relationships](https://laravel.com/docs/10.x/eloquent-relationships)
