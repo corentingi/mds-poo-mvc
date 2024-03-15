@@ -158,7 +158,7 @@ Note: You can add some contacts manually in our table with PhPMyAdmin.
 
 Steps:
 - Create a controller `ContactController` using `artisan`
-- Link the Controller to the model `Contact`
+- Ensure the Controller knows how to use the model `Contact`: `use App\Models\Contact;`
 - Create a new view `contact.list` using `artisan`
 
 You can add manually some contacts in database to display them.
@@ -201,3 +201,9 @@ This table will store groups names, for example `MyDigitalSchool students`.
 Create a relationship between `Contacts` and `Groups`.
 
 Use the Laravel docs: [Eloquent relationships](https://laravel.com/docs/10.x/eloquent-relationships)
+
+You can create groups manually in your database and associate them with contacts on when creating them.
+
+### Exercice 10: Edit existing contact details
+
+Create a new page with a form that allows to modify an existing contact and saving them with a save button.
