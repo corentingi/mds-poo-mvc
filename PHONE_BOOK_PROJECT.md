@@ -103,7 +103,7 @@ You can implement this using only `Routes` and `Views`.
 
 Create a new database `phone_book` and configure the connection to it in your Laravel application.
 
-To configure the database, create a file `.env` and add the following lines:
+To configure the database, modify the file `.env` to see the following lines:
 ```ini
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -112,6 +112,8 @@ DB_DATABASE=phone_book
 DB_USERNAME=root
 DB_PASSWORD=root
 ```
+
+If the `.env` file is not in your project, create it at the root of your project.
 
 You can use PhpMyAdmin to create the database `phone_book`.
 
